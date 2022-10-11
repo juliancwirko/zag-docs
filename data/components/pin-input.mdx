@@ -169,9 +169,9 @@ const [state, send] = useMachine(
       // value => string[]
       console.log("value changed to:", value)
     },
-    onComplete(value, valueAsString) {
-      // value => string[], valueAsString => string
-      console.log("completed value:", value)
+    onComplete(details) {
+      // details => { value: string[], valueAsString: string }
+      console.log("completed value:", details)
     },
     onInvalid(details) {
       // details => { index: number, value: string }
